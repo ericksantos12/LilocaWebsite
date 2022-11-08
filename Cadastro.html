@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Liloca Personalizados</title>
+</head>
+<body class="">
+
+    <header>
+        <div class="flex justify-center mt-5">
+            <img src="img/LILOCA.png">
+        </div>
+        <div class="bg-green-700 shadow-lg mt-5 mb-9 mx-10 md:mx-32 lg:mx-96 p-2 no-underline">
+            <nav>
+                <li class="flex">
+                    <ul class="mx-3">
+                        <a href="#" class="font-bold text-white">Cliente</a>
+                    </ul>
+                    <ul class="mx-3">
+                        <a href="#" class="font-bold text-green-800 cursor-not-allowed">Festa</a>
+                    </ul>
+                    <ul class="mx-3">
+                        <a href="#" class="font-bold text-green-800 cursor-not-allowed">Pedido</a>
+                    </ul>
+                </li>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="bg-gray-100 md:mx-32 lg:mx-96 p-6 shadow-lg">
+            <h1 class="text-center font-bold text-3xl mb-5">FORMULÁRIO</h1>
+            <p class="text-justify my-5">Ainda não é nosso cliente? Se cadastre para receber ofertas especiais!</p>
+
+            <form action="#" method="post">
+                <div class="relative z-0">
+                    <input type="text" name="userNome" id="userNome" placeholder="Nome" class="mb-4 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-green-700">
+                    <label for="userNome" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nome</label>
+                </div>
+                <div class="relative z-0">
+                    <input type="text" name="userCPF" placeholder="CPF" class="mb-4 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-green-700">
+                </div>
+
+                <div class="relative z-0">
+                    <input type="email" name="userEmail" placeholder="Email" class="mb-4 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-green-700">
+                </div>
+                <div class="relative z-0">
+                    <input type="tel" name="userTel" placeholder="Telefone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-green-700">
+                </div>
+                <div class="flex items-center justify-center mt-10">
+                    <button class="text-white font-bold hover:font-bold mr-4 bg-green-800 hover:bg-green-900 focus:ring-4 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Já Sou Cadastrado</button>
+                    <button type="submit" class="text-white font-bold hover:font-bold bg-green-800 hover:bg-green-900 focus:ring-4 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cadastrar</button>
+                </div>
+                
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <div class="">
+            <a href="#">Privacy Policy</a>
+            <p>Copyright &copy;2022 <b>Liloca Personalizados|</b> Todos os direitos reservados</p>
+            <a href="#">About Us</a>
+        </div>
+    </footer>
+</body>
+</html>
