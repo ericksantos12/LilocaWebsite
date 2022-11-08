@@ -12,3 +12,17 @@ html, body {
     url(../img/bg_ground_tile2.webp) repeat-x, 
     url(../img/bg_black_tile.png);
 }
+
+
+/* REMOVE SETAS FIELD DE NUMERO */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
