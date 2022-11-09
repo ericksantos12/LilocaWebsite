@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <title>Liloca Personalizados</title>
 </head>
@@ -14,17 +15,17 @@
         <div class="flex justify-center mt-5">
             <img src="img/LILOCA.png">
         </div>
-        <div class="bg-green-700 shadow-lg mt-5 mb-9 mx-10 md:mx-32 lg:mx-96 p-2 no-underline">
+        <div class="bg-green-700 shadow-lg mt-5 mb-9 mx-10 md:mx-32 xl:mx-64 2xl:mx-96 p-2 no-underline">
             <nav>
-                <li class="flex">
-                    <ul class="mx-3">
-                        <a href="Cadastro.html" class="font-bold text-white hover:text-gray-300">Cliente</a>
+                <li class="flex justify-center md:justify-start">
+                    <ul class="mx-3 p-1 md:p-0">
+                        <a href="Cadastro.html" class="font-bold text-xl p-2 md:text-base md:p-1 text-white hover:text-gray-300">Cliente</a>
                     </ul>
-                    <ul class="mx-3">
-                        <a href="Festa.html" class="font-bold text-white hover:text-gray-300">Festa</a>
+                    <ul class="mx-3 p-1 md:p-0">
+                        <a href="Festa.html" class="font-bold text-xl p-2 md:text-base md:p-1 text-white hover:text-gray-300">Festa</a>
                     </ul>
-                    <ul class="mx-3">
-                        <a href="Pedido.html" class="font-bold text-white hover:text-gray-300">Pedido</a>
+                    <ul class="mx-3 p-1 md:p-0">
+                        <a href="Pedido.html" class="font-bold text-xl p-2 md:text-base md:p-1 text-white hover:text-gray-300">Pedido</a>
                     </ul>
                 </li>
             </nav>
@@ -33,170 +34,145 @@
 
     <main>
 
-        <div class="bg-gray-100 md:mx-32 lg:mx-96 p-6 shadow-lg">
+        <div class="bg-gray-100 md:mx-32 xl:mx-64 2xl:mx-96 p-6 shadow-lg">
 
             <h1 class="font-bold mb-10 text-center text-3xl">Formulário de pedido</h1>
 
             <form action="#" method="post">
-                <div class="mb-6">
-                    <label for="endereco" class="block mb-2 text-lg">Endereço de Entrega</label>
-                    <input type="endereco" id="endereco" name="endereco" class="w-full p-2 shadow rounded-md border border-gray-300">
-                </div>
-                <div class="mb-6">
-                    <label for="tipo" class="block mb-2 text-lg">Tipo da Entrega</label>
-                    <div class="mb-2">
-                        <input type="radio" name="tipoentrega" id="retirada" value="retirada" class="">
-                        <label for="retirada" class="">Retirada</label>
+                <div class="mb-6 lg:grid lg:grid-cols-2">
+                    
+                    <div class="mb-6">
+                        <label for="endereco" class="block mb-2 text-lg">Endereço de Entrega</label>
+                        <input type="endereco" id="endereco" name="endereco" class="w-full lg:w-3/4 p-2 shadow rounded-md border border-gray-300">
                     </div>
-                    <div class="mb-2">
-                        <input type="radio" name="tipoentrega" id="entrega" value="entrega" class="">
-                        <label for="entrega" class="">Entrega</label>
+                    <div class="mb-6">
+                        <label for="tipoentrega" class="block mb-2 text-lg">Tipo da Entrega</label>
+                        <div class="mb-2">
+                            <input type="radio" name="tipoentrega" id="retirada" value="retirada" class="">
+                            <label for="retirada" class="">Retirada</label>
+                        </div>
+                        <div class="mb-2">
+                            <input type="radio" name="tipoentrega" id="entrega" value="entrega" class="">
+                            <label for="entrega" class="">Entrega</label>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-6">
                     <label for="prazo" class="block mb-2 text-lg">Prazo da Entrega</label>
                     <input type="date" id="prazo" name="prazo" class="w-full shadow rounded-md border border-gray-300">
                 </div>
+                <p class="my-7 text-lg">Quantidade de produtos</p>
                 <div class="mb-6 grid md:grid-cols-2">
-
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Pacote de balões 50 un</label>
+                            <label for="baloes">Pacote de balões 50 un</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="baloes" id="baloes" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Docinhos</label>
+                            <label for="docinhos">Docinhos</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="docinhos" id="docinhos" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Marshmallow 250g</label>
+                            <label for="marshmallow">Marshmallow 250g</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="marshmallow" id="marshmallow" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Salgadinhos</label>
+                            <label for="salgadinhos">Salgadinhos</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="salgadinhos" id="salgadinhos" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Coca-Cola 350ml</label>
+                            <label for="coca350ml">Coca-Cola 350ml</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="coca350ml" id="coca350ml" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Coca-Cola 2l</label>
+                            <label for="coca2l">Coca-Cola 2l</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="coca2l" id="coca2l" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Mini Sanduiche</label>
+                            <label for="minisanduice">Mini Sanduiche</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="minisanduice" id="minisanduice" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Toalha de Papel Colorida</label>
+                            <label for="toalhacolorida">Toalha de Papel Colorida</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="toalhacolorida" id="toalhacolorida" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Bolo de Prestígio</label>
+                            <label for="boloprestigio">Bolo de Prestígio</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="boloprestigio" id="boloprestigio" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Bolo Trufado</label>
+                            <label for="bolotrufado">Bolo Trufado</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="bolotrufado" id="bolotrufado" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Torta Holandesa</label>
+                            <label for="tortaholandesa">Torta Holandesa</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="tortaholandesa" id="tortaholandesa" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Copos Descartáveis 50 un</label>
+                            <label for="copodescartavel">Copos Descartáveis 50 un</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="copodescartavel" id="copodescartavel" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Pratos Descartáveis 50 un</label>
+                            <label for="pratodescartavel">Pratos Descartáveis 50 un</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="pratodescartavel" id="pratodescartavel" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
                     <div class="mb-3 grid grid-cols-2">
                         <div>
-                            <input type="checkbox" name="produtos" id="" value="">
-                            <label for="">Talheres Descartáveis 50 un</label>
+                            <label for="talherdescartavel">Talheres Descartáveis 50 un</label>
                         </div>
                         <div class="ml-3">
-                            <label for="">Qtd:</label>
-                            <input type="number" name="produtos" id="" min="1" class="w-14 h-8 ml-2">
+                            <input type="number" name="talherdescartavel" id="talherdescartavel" min="0" class="w-14 h-8 ml-2">
                         </div>
                     </div>
 
