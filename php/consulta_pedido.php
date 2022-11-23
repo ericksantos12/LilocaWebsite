@@ -61,7 +61,7 @@
                     try {
                     
                         require "conectaBD.php";
-                        require "mostrarTabela.php";
+                        require "utils.php";
 
                         $pedido = $_POST['pedido'];
                         
