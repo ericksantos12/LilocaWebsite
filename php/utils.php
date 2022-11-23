@@ -16,14 +16,12 @@
      * </code>
      *
      * @param object $conn Variável de conexão com o banco
-     * @param string $procedure String contendo query com o procedure
+     * @param string $procedure String contendo a query com o procedure
      * @param array $id Identificador de chave para o procedure/select
      **/
     function mostrarTabela(object $conn, string $procedure, array $id){
-        $query = $conn -> prepare($procedure);
-                $query -> execute($id);
-
-        $result = $query->fetchAll(PDO::FETCH_NUM);
+        
+        $result = fetchSelect($conn, $procedure, $id);
 
         for ($i=0; $i < count($result); $i++) { 
             echo "<tr>";
@@ -34,5 +32,20 @@
         }
     }
 
-    
+    /**
+     * Recebe um SELECT e passa seu resultado para um array, indexando os elementos numéricamente
+     * 
+     * @param object $conn Variável de conexão com o banco
+     * @param string $procedure String contendo o SELECT para preparar a query
+     * @param array $id Array contendo as variáveis coringas que serão executadas na query preparada
+     * @return array 
+     */
+    function fetchSelect(object $conn, string $select, array $id){
+        $query = $conn -> prepare($select);
+                $query -> execute($id);
+
+        $result = $query -> fetchAll(PDO::FETCH_NUM);
+
+        return $result;
+    }
 ?>
