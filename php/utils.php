@@ -36,7 +36,7 @@
      * Recebe um SELECT e passa seu resultado para um array, indexando os elementos numéricamente
      * 
      * @param object $conn Variável de conexão com o banco
-     * @param string $procedure String contendo o SELECT para preparar a query
+     * @param string $select String contendo o SELECT para preparar a query
      * @param array $id Array contendo as variáveis coringas que serão executadas na query preparada
      * @return array 
      */
