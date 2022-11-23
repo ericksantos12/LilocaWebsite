@@ -34,155 +34,177 @@
 
     <main>
 
-        <div class="bg-gray-100 md:mx-32 xl:mx-64 2xl:mx-96 p-6 shadow-lg">
-
-            <h1 class="font-bold mb-10 text-center text-3xl">Formulário de pedido</h1>
-
-            <form action="php/inclui_pedido.php" method="post">
-                <div class="mb-6 lg:grid lg:grid-cols-2">
-                    
+        <section>
+            <div class="bg-gray-100 md:mx-32 xl:mx-64 2xl:mx-96 p-6 shadow-lg">
+    
+                <h1 class="font-bold mb-10 text-center text-3xl">Formulário de pedido</h1>
+                
+                <form action="php/inclui_pedido.php" method="post">
+                    <div class="mb-6 lg:grid lg:grid-cols-2">
+                        <div class="grid grid-cols-3">
+                            <div class="mb-6">
+                                <label for="festa" class="block mb-2 text-lg">ID da Festa</label>
+                                <input required type="number" id="festa" name="festa" min="1" class="p-2 w-14 shadow rounded-md border border-gray-300">
+                            </div>
+                            <div class="mb-6 col-span-2">
+                                <label for="endereco" class="block mb-2 text-lg">Endereço de Entrega</label>
+                                <input required type="endereco" id="endereco" name="endereco" class="w-full lg:w-3/4 p-2 shadow rounded-md border border-gray-300">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="tipoentrega" class="block mb-2 text-lg">Tipo da Entrega</label>
+                            <div class="mb-2">
+                                <input required type="radio" name="tipoentrega" id="retirada" value="retirada" class="">
+                                <label for="retirada" class="">Retirada</label>
+                            </div>
+                            <div class="mb-2">
+                                <input required type="radio" name="tipoentrega" id="entrega" value="entrega" class="">
+                                <label for="entrega" class="">Entrega</label>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mb-6">
-                        <label for="endereco" class="block mb-2 text-lg">Endereço de Entrega</label>
-                        <input type="endereco" id="endereco" name="endereco" class="w-full lg:w-3/4 p-2 shadow rounded-md border border-gray-300">
+                        <label for="prazo" class="block mb-2 text-lg">Prazo da Entrega</label>
+                        <input required type="date" id="prazo" name="prazo" class="w-full shadow rounded-md border border-gray-300">
                     </div>
+                    <p class="my-7 text-lg">Quantidade de produtos</p>
+                    <div class="mb-6 grid md:grid-cols-2">
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="baloes">Pacote de balões 50 un</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="baloes" id="baloes" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="docinhos">Docinhos</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="docinhos" id="docinhos" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="marshmallow">Marshmallow 250g</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="marshmallow" id="marshmallow" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="salgadinhos">Salgadinhos</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="salgadinhos" id="salgadinhos" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="coca350ml">Coca-Cola 350ml</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="coca350ml" id="coca350ml" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="coca2l">Coca-Cola 2l</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="coca2l" id="coca2l" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="minisanduiche">Mini Sanduiche</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="minisanduiche" id="minisanduiche" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="toalhacolorida">Toalha de Papel Colorida</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="toalhacolorida" id="toalhacolorida" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="boloprestigio">Bolo de Prestígio</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="boloprestigio" id="boloprestigio" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="bolotrufado">Bolo Trufado</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="bolotrufado" id="bolotrufado" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="tortaholandesa">Torta Holandesa</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="tortaholandesa" id="tortaholandesa" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="copodescartavel">Copos Descartáveis 50 un</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="copodescartavel" id="copodescartavel" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="pratodescartavel">Pratos Descartáveis 50 un</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="pratodescartavel" id="pratodescartavel" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+                        <div class="mb-3 grid grid-cols-2">
+                            <div>
+                                <label for="talherdescartavel">Talheres Descartáveis 50 un</label>
+                            </div>
+                            <div class="ml-3">
+                                <input type="number" name="talherdescartavel" id="talherdescartavel" min="0" class="w-14 h-8 ml-2">
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div>
+                        <input type="submit" value="Enviar" class="bg-green-600 text-white rounded-md px-4 py-2 hover:bg-green-500">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <div class="bg-gray-100 md:mx-32 xl:mx-64 2xl:mx-96 p-6 shadow-lg">
+                <h2 class="font-bold mb-10 text-center text-2xl">Consulta</h2>
+                <form action="php/consulta_pedido.php" method="post">
                     <div class="mb-6">
-                        <label for="tipoentrega" class="block mb-2 text-lg">Tipo da Entrega</label>
-                        <div class="mb-2">
-                            <input type="radio" name="tipoentrega" id="retirada" value="retirada" class="">
-                            <label for="retirada" class="">Retirada</label>
-                        </div>
-                        <div class="mb-2">
-                            <input type="radio" name="tipoentrega" id="entrega" value="entrega" class="">
-                            <label for="entrega" class="">Entrega</label>
-                        </div>
+                        <label for="pedido" class="block mb-2 text-lg">ID do Pedido</label>
+                        <input type="number" name="pedido" id="pedido" min="1" class="w-14 shadow rounded-md border border-gray-300">
                     </div>
-                </div>
-                <div class="mb-6">
-                    <label for="prazo" class="block mb-2 text-lg">Prazo da Entrega</label>
-                    <input type="date" id="prazo" name="prazo" class="w-full shadow rounded-md border border-gray-300">
-                </div>
-                <p class="my-7 text-lg">Quantidade de produtos</p>
-                <div class="mb-6 grid md:grid-cols-2">
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="baloes">Pacote de balões 50 un</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="baloes" id="baloes" min="0" class="w-14 h-8 ml-2">
-                        </div>
+                    <div>
+                        <input type="submit" value="Consultar" class="bg-green-600 text-white rounded-md px-4 py-2 hover:bg-green-500">
                     </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="docinhos">Docinhos</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="docinhos" id="docinhos" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="marshmallow">Marshmallow 250g</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="marshmallow" id="marshmallow" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="salgadinhos">Salgadinhos</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="salgadinhos" id="salgadinhos" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="coca350ml">Coca-Cola 350ml</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="coca350ml" id="coca350ml" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="coca2l">Coca-Cola 2l</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="coca2l" id="coca2l" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="minisanduiche">Mini Sanduiche</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="minisanduiche" id="minisanduiche" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="toalhacolorida">Toalha de Papel Colorida</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="toalhacolorida" id="toalhacolorida" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="boloprestigio">Bolo de Prestígio</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="boloprestigio" id="boloprestigio" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="bolotrufado">Bolo Trufado</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="bolotrufado" id="bolotrufado" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="tortaholandesa">Torta Holandesa</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="tortaholandesa" id="tortaholandesa" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="copodescartavel">Copos Descartáveis 50 un</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="copodescartavel" id="copodescartavel" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="pratodescartavel">Pratos Descartáveis 50 un</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="pratodescartavel" id="pratodescartavel" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-                    <div class="mb-3 grid grid-cols-2">
-                        <div>
-                            <label for="talherdescartavel">Talheres Descartáveis 50 un</label>
-                        </div>
-                        <div class="ml-3">
-                            <input type="number" name="talherdescartavel" id="talherdescartavel" min="0" class="w-14 h-8 ml-2">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div>
-                    <input type="submit" value="Enviar" class="bg-green-600 text-white rounded-md px-4 py-2 hover:bg-green-500">
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
+        </section>
 
     </main>
 </body>
