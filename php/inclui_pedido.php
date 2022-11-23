@@ -5,7 +5,7 @@ try {
 
     $produtos = ['baloes', 'docinhos', 'marshmallow', 'salgadinhos', 'coca350ml', 'coca2l', 'minisanduiche', 'toalhacolorida', 'boloprestigio', 'bolotrufado', 'tortaholandesa', 'copodescartavel', 'pratodescartavel', 'talherdescartavel'];
     
-    $festa = 3; //temp
+    $festa = $_POST['festa'];
     $dataPedido = date('Y-m-d');
     $tipoEntrega = $_POST['tipoentrega'];
     $endereco = $_POST['endereco'];
@@ -53,9 +53,13 @@ try {
     
     $conn->commit(); //fim
 
+    echo "Cadastrado com sucesso <br>";
+
 } catch (PDOException $e) {
     $conn->rollBack();
     echo "Erro: " . $e->getMessage();
 }
 
 ?>
+
+<a href="javascript:history.back()">Voltar</a>
