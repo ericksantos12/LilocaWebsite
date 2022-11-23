@@ -1,5 +1,9 @@
 <?php
 require_once 'conectaBD.php';
+require_once 'utils.php';
+
+// TODO: Fazer stored procedure inserção de pedido e associativa com produto
+// TODO: Integrar stored procedure com o código
 
 try {
 
@@ -32,14 +36,13 @@ try {
     for ($i=0; $i < count($produtos); $i++) { 
         $produtoQtd = (int)$_POST[$produtos[$i]]; // pega a quantidade de produtos escolhidos no forms
 
-        if ($produtoQtd != 0){ // verifica se a quantidade n é 0
-            // prepara a query de select para pegar o valor unitario do produto
-            $select = $conn->prepare("SELECT `valorUnit` FROM `produtos` WHERE idProdutos = ?");
-            $select->execute([$i + 1]); // executa a query
-    
-            $valorQtd = $select->fetch()[0] * $produtoQtd; // pega o resultado do select e multiplica pela quantidade de produtos
-    
+        if ($produtoQtd != 0){ // verifica se a quantidade nao é 0
+
+            // Pega o valor unitário do produto e múltiplica pela quantidade selecionada
+            $valorQtd = fetchSelect($conn, "SELECT `valorUnit` FROM `produtos` WHERE idProdutos = ?", [$i + 1])[0][0] * $produtoQtd;
+
             $query->execute([$lastID, $i + 1, $produtoQtd, $valorQtd]); // executa a inserção na tabela associativa
+
             $valorProdutos += $valorQtd; // soma o valor final na variavel total
         }
     }
