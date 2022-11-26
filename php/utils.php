@@ -5,15 +5,6 @@
      * Método capaz de mostrar o resultado de um SELECT formatando-o em linhas e colunas de uma table
      *
      * Este método mostra os resultados de um SELECT estruturando-os em tags de tabela, vale ressaltar que este método deve ser chamado dentro de um \<tbody>, consequentemente dentro de uma tag \<table> para que funcione.
-     * <b>Exemplo:</b>
-     * <code>
-     * <table> 
-     *  <thead>...</thead> 
-     *  <tbody> 
-     *      mostrarTabela(...) 
-     *  </tbody> 
-     * </table>
-     * </code>
      *
      * @param object $conn Variável de conexão com o banco
      * @param string $procedure String contendo a query com o procedure
