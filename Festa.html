@@ -35,10 +35,12 @@
 
         <div class="bg-gray-100 md:mx-32 xl:mx-64 2xl:mx-96 p-6 shadow-lg">
             <h1 class="font-bold mb-10 text-center text-3xl">Formulário de festa</h1>
-            <form action="#" method="post">
-                <div class="mb-6">
-                    <label for="nomeCliente" class="text-lg">Nome do cliente</label>
-                    <input type="text" name="nomeCliente" id="nomeCliente" class="w-full shadow-md rounded-md border border-gray-50">
+            <form action="php/inclui_festa.php" method="post">
+                <div class="flex justify-center">
+                    <div class="mb-6">
+                        <label for="idCliente" class="text-lg">ID do Cliente</label>
+                        <input type="number" name="idCliente" id="idCliente" class="w-full shadow-md rounded-md border border-gray-50">
+                    </div>
                 </div>
                 <div class="mb-6">
                     <label for="dateTime" class="text-lg">Data da festa</label>
@@ -68,6 +70,20 @@
                 </div>
             </form>
         </div>
+        <section class="mt-5">
+            <div class="bg-gray-100 md:mx-32 xl:mx-64 2xl:mx-96 p-6 shadow-lg">
+                <h2 class="font-bold mb-10 text-center text-2xl">Consulta</h2>
+                <form action="php/consulta_festa.php" method="post">
+                    <div class="mb-6">
+                        <label for="festa" class="block mb-2 text-lg">ID da festa</label>
+                        <input type="number" name="festa" id="festa" min="1" class="w-14 shadow rounded-md border border-gray-300">
+                    </div>
+                    <div>
+                        <input type="submit" value="Consultar" class="bg-green-600 text-white rounded-md px-4 py-2 hover:bg-green-500">
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 </body>
 </html>
