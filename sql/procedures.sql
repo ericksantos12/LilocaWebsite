@@ -27,6 +27,19 @@ DELIMITER ;
 -- // ----------------------------------------------------------------------------------------------------------------------// --
 
 DELIMITER $$
+CREATE PROCEDURE `Consultar_Festa` (IN `id` INT)
+BEGIN
+
+SELECT `nome`, `idFesta`, `Cliente_idCliente`, `dataDaFesta`, `aniversariante`, `idade`, `tema`, `cores`
+FROM festa
+INNER JOIN cliente
+WHERE festa.Cliente_idCliente = cliente.idCliente AND Cliente_idCliente = `id`;
+END$$
+DELIMITER ;
+
+-- // ----------------------------------------------------------------------------------------------------------------------// --
+
+DELIMITER $$
 CREATE PROCEDURE `Inclui_Pedido`(IN `idFesta` INT, IN `tipo` VARCHAR(225), IN `endereco` VARCHAR(255), IN `prazo` DATETIME, IN `frete` DOUBLE, IN `sinal` DOUBLE, OUT `LastID` INT)
 BEGIN
 
@@ -46,6 +59,17 @@ BEGIN
 SELECT valorUnit INTO @valorProduto FROM produtos WHERE produtos.idProdutos = idProd;
 
 INSERT INTO `pedido_has_produtos`(`Pedido_idPedido`, `Produtos_idProdutos`, `quantidade`, `valorQtd`) VALUES (idPed, idProd, qtd, @valorProduto * qtd);
+
+END$$
+DELIMITER ;
+
+-- // ----------------------------------------------------------------------------------------------------------------------// --
+
+DELIMITER $$
+CREATE PROCEDURE `Inclui_Festa` (IN `idCliente` INT, IN `dataFesta` DATETIME, IN `aniversarianteNome` VARCHAR(255), IN `idadeAniversariante` INT, IN `tema` VARCHAR(255), IN `cor` VARCHAR(255))
+BEGIN
+
+INSERT INTO `festa` (`Cliente_idCliente`, `dataDaFesta`, `aniversariante`, `idade`, `tema`, `cores`) VALUES (idCliente, dataFesta, aniversarianteNome, idadeAniversariante, tema, cor);
 
 END$$
 DELIMITER ;
